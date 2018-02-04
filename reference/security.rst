@@ -96,8 +96,8 @@ Projects simplifying the use of CSP
 * Node.js/Express: https://github.com/evilpacket/helmet
 
 
-.. _`wide adoption among browsers`: http://caniuse.com/#search=content%20security%20policy
-.. _`Content Security Policy`: http://www.w3.org/TR/CSP/
+.. _`wide adoption among browsers`: https://caniuse.com/#search=content%20security%20policy
+.. _`Content Security Policy`: https://www.w3.org/TR/CSP/
 .. _`CSP 1.1`: https://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html
 .. _`MDN`: https://developer.mozilla.org/en/docs/Security/CSP
 .. _`Security Review Process`: https://wiki.mozilla.org/Security/ReviewProcess

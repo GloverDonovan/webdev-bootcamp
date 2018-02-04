@@ -21,7 +21,7 @@ If you are running Mac OS X, most of the software mentioned here can be
 installed using the `Homebrew`_ package manager.
 
 .. _VirtualBox: https://www.virtualbox.org/
-.. _Homebrew: http://brew.sh/
+.. _Homebrew: https://brew.sh/
 
 Git
 ---
@@ -45,7 +45,7 @@ same time and merge their changes together at the end.
       A Mac OS X program for interacting with Github as an alternative to using
       git in a terminal. Useful if you are not used to using a terminal yet.
 
-.. _Git: http://git-scm.com/
+.. _Git: https://git-scm.com/
 
 Python
 ------
@@ -75,11 +75,11 @@ as Node applications.
 
 .. seealso::
 
-   `nodejs.org Downloads <http://nodejs.org/download/>`_
+   `nodejs.org Downloads <https://nodejs.org/download/>`_
       The official Node.js download page, which includes installers for Windows
       and Mac OS X.
 
-.. _Node.js: http://nodejs.org/
+.. _Node.js: https://nodejs.org/
 
 Miscellaneous
 -------------------

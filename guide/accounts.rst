@@ -22,7 +22,7 @@ for guides on the basics of using git and Github.
       Mozilla's organization account on Github.
 
 .. _Github: https://github.com/
-.. _git: http://git-scm.com/
+.. _git: https://git-scm.com/
 .. _Github help site: https://help.github.com/
 
 Bugzilla
