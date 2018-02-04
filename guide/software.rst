@@ -34,15 +34,15 @@ same time and merge their changes together at the end.
 .. seealso::
 
    `help.github.com <https://help.github.com/>`_
-      A great guide to getting start with Git and Github, which hosts most of
+      A great guide to getting start with Git and GitHub, which hosts most of
       our git repositories.
 
-   `Github for Windows <https://windows.github.com/>`_
-      A Windows program for interacting with Github as an alternative to using
+   `GitHub for Windows <https://windows.github.com/>`_
+      A Windows program for interacting with GitHub as an alternative to using
       git in a terminal. Useful if you are not used to using a terminal yet.
 
-   `Github for Mac <https://mac.github.com/>`_
-      A Mac OS X program for interacting with Github as an alternative to using
+   `GitHub for Mac <https://mac.github.com/>`_
+      A Mac OS X program for interacting with GitHub as an alternative to using
       git in a terminal. Useful if you are not used to using a terminal yet.
 
 .. _Git: https://git-scm.com/

@@ -90,7 +90,7 @@ General
 - Jenkins_ is a continuous integration server that builds and/or tests software
   projects continuously.
 - `Travis CI`_ is a hosted continuous integration service that integrates with
-  Github.
+  GitHub.
 - Selenium_ is a tool for automating browsers, often for testing purposes.
 
 .. _Jenkins: https://jenkins.io/
