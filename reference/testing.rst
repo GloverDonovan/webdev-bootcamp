@@ -112,10 +112,10 @@ Python
 - Mock_ is one of the most popular libraries for replacing parts of the system
   you're testing with mock objects and asserting things about their behavior.
 
-.. _nose: https://nose.readthedocs.io/en/latest/
+.. _nose: https://nose.readthedocs.io/
 .. _django-nose: https://github.com/django-nose/django-nose
 .. _nose-progressive: https://github.com/erikrose/nose-progressive
-.. _factory-boy: https://factoryboy.readthedocs.io/en/latest/
+.. _factory-boy: https://factoryboy.readthedocs.io/
 .. _Mock: http://www.voidspace.org.uk/python/mock/
 
 Node / JavaScript

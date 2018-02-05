@@ -59,7 +59,7 @@ of our servers run the sites on Python 2.
 
 .. seealso::
 
-   `The Hitchhiker's Guide to Python <http://docs.python-guide.org/en/latest/>`_
+   `The Hitchhiker's Guide to Python <http://docs.python-guide.org/>`_
       A useful guide for beginner and expert Python developers. If you need to
       install Python on your computer, this guide will help!
 
