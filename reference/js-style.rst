@@ -126,8 +126,6 @@ Space after keyword, and space before curly
 Functions
 ---------
 
-.. _named-functions:
-
 Named Functions
 ~~~~~~~~~~~~~~~
 

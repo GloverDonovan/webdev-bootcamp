@@ -15,7 +15,7 @@ projects to contribute to:
   someone may reply with a recommendation.
 
 .. _GetInvolved: https://wiki.mozilla.org/Webdev/GetInvolved
-.. _`dev-webdev@lists.mozilla.org mailing list`: https://lists.mozilla.org/listinfo/dev-webdev
+.. _dev-webdev@lists.mozilla.org mailing list: https://lists.mozilla.org/listinfo/dev-webdev
 
 Getting set up
 --------------

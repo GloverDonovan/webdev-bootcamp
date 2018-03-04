@@ -36,4 +36,4 @@ Licensing
 Feel free to fork this repo or adapt its work for your own bootcamp. All work
 is licensed under a `Creative Commons Attribution`_ license.
 
-.. _`Creative Commons Attribution`: https://creativecommons.org/licenses/by/4.0/
+.. _Creative Commons Attribution: https://creativecommons.org/licenses/by/4.0/

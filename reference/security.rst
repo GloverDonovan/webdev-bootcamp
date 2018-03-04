@@ -96,12 +96,12 @@ Projects simplifying the use of CSP
 * Node.js/Express: https://github.com/evilpacket/helmet
 
 
-.. _`wide adoption among browsers`: https://caniuse.com/#search=content%20security%20policy
-.. _`Content Security Policy`: https://www.w3.org/TR/CSP2/
-.. _`CSP 3.0`: https://www.w3.org/TR/CSP3/
-.. _`MDN`: https://developer.mozilla.org/docs/Security/CSP
-.. _`Security Review Process`: https://wiki.mozilla.org/Security/ReviewProcess
-.. _`blog post`: https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/
-.. _`XFO on MDN`: https://developer.mozilla.org/docs/HTTP/X-Frame-Options
-.. _`Django`: https://docs.djangoproject.com/en/dev/ref/clickjacking/
-.. _`Node.js`: https://npmjs.org/package/helmet
+.. _wide adoption among browsers: https://caniuse.com/#search=content%20security%20policy
+.. _Content Security Policy: https://www.w3.org/TR/CSP2/
+.. _CSP 3.0: https://www.w3.org/TR/CSP3/
+.. _MDN: https://developer.mozilla.org/docs/Security/CSP
+.. _Security Review Process: https://wiki.mozilla.org/Security/ReviewProcess
+.. _blog post: https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/
+.. _XFO on MDN: https://developer.mozilla.org/docs/HTTP/X-Frame-Options
+.. _Django: https://docs.djangoproject.com/en/dev/ref/clickjacking/
+.. _Node.js: https://npmjs.org/package/helmet

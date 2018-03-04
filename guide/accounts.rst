@@ -52,4 +52,4 @@ get this permission automatically; there is no need to ask for it.
    ``Cave Johnson [:withthelemons]``.
 
 .. _Bugzilla: https://bugzilla.mozilla.org/
-.. _`Bugzilla Permissions Page`: https://bugzilla.mozilla.org/page.cgi?id=get_permissions.html
+.. _Bugzilla Permissions Page: https://bugzilla.mozilla.org/page.cgi?id=get_permissions.html
