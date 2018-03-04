@@ -11,7 +11,9 @@ Just so we all know what we're talking about, a CSS *rule* comprises one or more
 *declarations*. A declaration comprises a *property* and a *value* (some
 properties accept multiple values).
 
-A rule in CSS looks like this::
+A rule in CSS looks like this:
+
+.. code-block:: css
 
     selector {
         property: value;
@@ -56,7 +58,9 @@ syntax`_ unless, for some reason, you need to target old versions of Safari.
 .. _old Webkit syntax: https://www.webkit.org/blog/175/introducing-css-gradients/
 
 Practice progressive enhancement! Include solid fallback colors for old
-browsers that don't support ``rgba()`` or gradients::
+browsers that don't support ``rgba()`` or gradients:
+
+.. code-block:: css
 
     .widget {
         background: #ccc;
@@ -105,7 +109,9 @@ single element just for an easy style hook, or by creating oodles of generic
 classes to apply fine-grained styling at the expense of requiring a string of
 classes on each element in the markup.
 
-**Bad:** ::
+**Bad:**
+
+.. code-block:: css
 
     /* Too specific */
     .module-news-title-main {
@@ -130,7 +136,9 @@ to make every possible style rule free-standing and every element 100% reusable
 in any context on any page. Use descendant selectors as needed, but keep them
 simple.
 
-**Good:** ::
+**Good:**
+
+.. code-block:: css
 
     .module-news h2 {
         font: 20px 'League Gothic', sans-serif;
@@ -191,7 +199,9 @@ Use "`bulletproof font syntax`_" for webfonts. You usually don't need to include
 SVG font files unless your project needs to target older versions of WebKit.
 For modern browsers, TTF + WOFF is sufficient, as well as EOT for older
 versions of IE (which may also be optional, depending on your target audience).
-Example::
+Example:
+
+.. code-block:: css
 
     @font-face {
         font-family: 'Open Sans';
@@ -227,7 +237,9 @@ In general, when you're writing CSS, you should follow the following rules:
 * Put the closing brace (``}``) on its own line, aligned with the rule's
   selector.
 
-Here's an example::
+Here's an example:
+
+.. code-block:: css
 
     .selector-1,
     .selector-2 {
@@ -243,13 +255,17 @@ When you have a block of related rules, each with one or two declarations,
 you can use a single-line format without any blank lines between rules. This
 makes the block of related rules a bit easier to scan. When doing so, include
 a single space after the opening brace and before the closing brace. Add
-spaces after the selector to align the values, like so::
+spaces after the selector to align the values, like so:
+
+.. code-block:: css
 
     .message-success { color: #080; }
     .message-error   { color: #ff0; }
     .message-notice  { color: #00f; }
 
-Here's another example::
+Here's another example:
+
+.. code-block:: css
 
     @keyframes bounce {
         0%   { bottom: 300px; }
@@ -267,7 +283,9 @@ well within 80 characters even with indentation.
 Long, comma-separated property values---such as multiple background images,
 gradients, transforms, transitions, webfonts, or text and box shadows---can
 be arranged across multiple lines (indented one level from their property),
-as seen below::
+as seen below:
+
+.. code-block:: css
 
     .selector {
         background-image:
@@ -282,7 +300,9 @@ as seen below::
     }
 
 For vendor prefixed properties, use spaces to align the values, keeping the
-property names left-aligned as usual::
+property names left-aligned as usual:
+
+.. code-block:: css
 
     .selector {
         -webkit-box-shadow: 1px 2px 0 #ccc;
@@ -292,7 +312,9 @@ property names left-aligned as usual::
         box-shadow:         1px 2px 0 #ccc;
     }
 
-Or, when the value has the prefix::
+Or, when the value has the prefix:
+
+.. code-block:: css
 
     .selector {
         background: -webkit-linear-gradient(to bottom, #fff, #000);
@@ -364,11 +386,15 @@ and button styles. If you're using such a framework, you can use those classes
 as mixins in a preprocessed style sheet, rather than littering markup
 with presentational names.
 
-**Bad**::
+**Bad**:
+
+.. code-block:: html
 
     <div class="author-bio col-md-3 col-md-offset-2">
 
-**Better**::
+**Better**:
+
+.. code-block:: scss
 
     .author-bio {
         .col-md-3;
@@ -478,7 +504,9 @@ All the declarations for the parent element should come before the nested rules.
 Include a blank line before each nested rule to separate it from the rule or
 declaration above it.
 
-**Really Bad**::
+**Really Bad**:
+
+.. code-block:: scss
 
     .wrapper {
         #sidebar {
@@ -496,7 +524,9 @@ declaration above it.
         }
     }
 
-**Good**::
+**Good**:
+
+.. code-block:: scss
 
     .module-news {
         background: #ccc;
@@ -513,7 +543,7 @@ deeper than three levels, you probably need to reconsider your approach.
 If you wouldn't need to use a descendent selector in vanilla CSS, you probably
 don't need to nest it in a pre-processed style sheet.
 
-::
+.. code-block:: scss
 
     /* Unnecessary nesting; the nested class doesn't need the specificity */
     .module {
@@ -538,7 +568,7 @@ don't need to nest it in a pre-processed style sheet.
 If the parent rule has no declarations, nesting isn't necessary at all. If you
 need the specificity, use an ordinary descendant selector.
 
-::
+.. code-block:: scss
 
     /* Especially unnecessary nesting */
     .breadcrumbs {
@@ -612,7 +642,9 @@ files still read like a CSS document.
   but makes variables easier to spot by humans.
 
 
-**Bad** (though valid in Stylus)::
+**Bad** (though valid in Stylus):
+
+.. code-block:: scss
 
     .module
         background light-background
@@ -620,12 +652,14 @@ files still read like a CSS document.
             font-size h-medium
 
 
-**Good** (and still valid in Stylus)::
+**Good** (and still valid in Stylus):
+
+.. code-block:: scss
 
     .module {
-        background: $light-background;
+        background: var(--light);
         h2 {
-            font-size: $h-medium;
+            font-size: var(--medium);
         }
     }
 

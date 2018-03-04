@@ -20,7 +20,7 @@ First and Foremost
 Variable Formatting:
 --------------------
 
-::
+.. code-block:: javascript
 
     // Classes: CapitalizedWords
     var MyClass = ...
@@ -37,7 +37,9 @@ Indentation
 
 4-space indents (no tabs).
 
-For our projects, always assign var on a newline, not comma separated::
+For our projects, always assign var on a newline, not comma separated:
+
+.. code-block:: javascript
 
     // Bad
     var a = 1,
@@ -55,7 +57,9 @@ Use ``[]`` to assign a new array, not ``new Array()``.
 Use ``{}`` for new objects, as well.
 
 The array literal ``[]`` can be used with either a single line or multiple
-lines, depending how easy it is to read::
+lines, depending how easy it is to read:
+
+.. code-block:: javascript
 
     // Okay on a single line
     var stuff = [1, 2, 3];
@@ -70,7 +74,9 @@ lines, depending how easy it is to read::
 Never assign multiple variables on the same line
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Example of what not to do::
+Example of what not to do:
+
+.. code-block:: javascript
 
     var a = 1, b = 'foo', c = 'don\'t do this';
 
@@ -78,7 +84,9 @@ Example of what not to do::
 DO NOT line up variable names
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For consistency, don't do this::
+For consistency, don't do this:
+
+.. code-block:: javascript
 
     var wut    = true;
     var boohoo = false;
@@ -96,7 +104,7 @@ still use semi-colons to be consistent with the rest of the codebase.
 Conditionals and Loops
 ----------------------
 
-::
+.. code-block:: javascript
 
     // Bad
     if (something) doStuff()
@@ -110,7 +118,7 @@ Conditionals and Loops
 Space after keyword, and space before curly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
+.. code-block:: javascript
 
     // Bad
     if(bad){
@@ -129,13 +137,17 @@ Functions
 Named Functions
 ~~~~~~~~~~~~~~~
 
-You should assign functions to named symbols, like so::
+You should assign functions to named symbols, like so:
+
+.. code-block:: javascript
 
     var updateOnClick = function() { ... };
 
 Here, the function above is known as ``updateOnClick``. The same can be done
 with objects. In the example below, ``someObject.updateOnClick`` is the
-function::
+function:
+
+.. code-block:: javascript
 
     var someObject = {
         updateOnClick: function() { ... }
@@ -144,7 +156,9 @@ function::
 If you're passing a nontrivial function as an argument, you should name it to
 avoid obscuring what it's supposed to do.
 
-Don't do this::
+Don't do this:
+
+.. code-block:: javascript
 
     obj.forEach(function(item) {
         // A large anonymous function with dozens of lines of code.
@@ -152,7 +166,9 @@ Don't do this::
         // without reading through it entirely.
     });
 
-Instead, do the following::
+Instead, do the following:
+
+.. code-block:: javascript
 
     var doMagic = function(item) { ... };
 
@@ -165,7 +181,9 @@ Whitespacing Functions
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Do not put a space between "function" and the opening parenthesis. Do put a
-space after the closing parenthesis and before the opening curly brace::
+space after the closing parenthesis and before the opening curly brace:
+
+.. code-block:: javascript
 
     var method = function(argOne, argTwo) {
         // Do something
@@ -187,7 +205,9 @@ Always use strict equality (``===``).
 
 The only exception to this rule is when testing for null and undefined.
 
-Example::
+Example:
+
+.. code-block:: javascript
 
     if (value != null) {
         // This is an exception to the rule. Usually you'd use !==
@@ -205,7 +225,9 @@ There is only one exception: ``"don't escape single quotes in strings; use doubl
 Comments
 --------
 
-For Node.js functions, always provide a clear comment in this format::
+For Node.js functions, always provide a clear comment in this format:
+
+.. code-block:: javascript
 
     /* Briefly explains what this does
      * Expects: whatever parameters
@@ -214,7 +236,9 @@ For Node.js functions, always provide a clear comment in this format::
 
 
 If your comment is really long, use the format mentioned above (``/* ... */``).
-Otherwise make short comments like so::
+Otherwise make short comments like so:
+
+.. code-block:: javascript
 
     // This is a short comment that ends in a period.
 
@@ -225,7 +249,9 @@ Ternaries
 Avoid using the ternary operator (``(condition) ? (true) : (false)``).
 
 If using the ternary operator makes a line particularly complex, or would
-require using multiple lines, don't use it::
+require using multiple lines, don't use it:
+
+.. code-block:: javascript
 
     // Bad
     var foo = (user.lastLogin > new Date().getTime() - 16000) ? user.lastLogin - 24000 : 'wut';
@@ -241,13 +267,15 @@ General Good Practices
   a constant, refactor it as a single constant declaration at the top of the
   file.
 * Try caching your regular expressions (regex) by declaring them as constants.
-* Always check for truthiness::
+* Always check for truthiness:
 
-    // Bad
-    if (blah !== false) { ... }
+  .. code-block:: javascript
 
-    // Good
-    if (blah) { ... }
+      // Bad
+      if (blah !== false) { ... }
+
+      // Good
+      if (blah) { ... }
 
 * If one line in your code is really long, you should probably refactor it. If
   this isn't possible, try breaking it up into multiple lines.
