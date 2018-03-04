@@ -11,7 +11,7 @@ General Guidelines
 - Make sure your code validates.
 - No inline CSS or JavaScript.
 - Be semantic.
-- Use doublequotes for attributes::
+- Use double quotes for attributes::
 
       <a href="#">Good</a>
       <a href='#'>Less Good</a>

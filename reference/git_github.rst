@@ -1,9 +1,9 @@
-
 Git and GitHub
 ==============
 
 This document describes some tips and tricks for using Git and GitHub.
-There are also some best practices for :ref:`best-practices-github`.
+You may also want to read through the best practices for both
+:ref:`best-practices-github`.
 
 Commit Messages
 ---------------
@@ -11,11 +11,15 @@ Commit Messages
 See `Tim Pope's blog post on git commit messages
 <http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>`_.
 
+Chris Beams' `How to Write a Git Commit Message`_ may also be useful.
+
+.. _How to Write a Git Commit Message: https://chris.beams.io/posts/git-commit/
+
 Rebasing Commits
 ----------------
 
 While projects vary in their opinions on whether merge commits should be
-avoided or not, it is generally a good idea to rebase a feature branch before
+avoided or not, it is generally a good idea to `rebase`_ a feature branch before
 submitting a pull request.
 
 Rebasing allows you to alter a series of commits, changing the history of your
@@ -30,6 +34,8 @@ repository. Typically you rebase a branch to:
 
 These changes all make the code review process as well as the merging process
 easier, and are recommended for all pull requests.
+
+.. _rebase: https://git-scm.com/book/en/v2/Git-Branching-Rebasing
 
 .. warning:: Rebasing code that has already been pushed to a public or shared
              repository makes it very difficult for others to update their
@@ -46,8 +52,8 @@ Asking for Review
 -----------------
 
 When asking someone for a code review, it is recommended to add a new comment
-to a pull request using the ``@Username`` syntax. This notifies them via email
-that a review has been requested. Adding the ``@Username`` to the pull request
+to a pull request using the ``@username`` syntax. This notifies them via email
+that a review has been requested. Adding their ``@username`` to the pull request
 description will **not** send out the notification and thus isn't recommended.
 
 You may also add an attachment to a bug in Bugzilla and paste in the URL for

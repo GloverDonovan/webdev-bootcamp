@@ -44,20 +44,19 @@ third-party; and local imports::
     from myapp import models, views
 
 
-Alphabetize your imports, it will make your code easier to scan. See how
-terrible this is::
+Alphabetize your imports, it will make your code easier to scan. Compare::
 
     import cows
     import kittens
     import bears
 
-A simple sort::
+This is much easier to read with a simple sort::
 
     import bears
     import cows
     import kittens
 
-Imports on top, ``from``-imports below::
+Use ``import`` statements on top, before ``from``-imports, like so::
 
     import x
     import y
@@ -66,7 +65,7 @@ Imports on top, ``from``-imports below::
     from xylophone import bar
     from zoos import lions
 
-That's loads easier to read than::
+That's a lot easier to read than::
 
     from bears import pandas
     import x
@@ -83,7 +82,7 @@ alphabetized ``CONSTANT``, ``Class``, ``var`` order::
 
 
 If possible though, it may be easier to import the entire package, especially
-for methods as it help answers the question, "where did ``you`` come from?"
+for methods, as it help answers the question, "where did ``you`` come from?"
 
 Bad::
 
@@ -116,30 +115,30 @@ Whitespace matters
 
 Use single quotes unless double (or triple) quotes would be an improvement::
 
-    'this is good'
+    'do this'
 
-    'this\'s bad'
+    'but don\'t do this'
 
-    "this's good"
+    "it's best to avoid escaping '"
 
     "this is inconsistent, but ok"
 
-    """this's sometimes "necessary"."""
+    """sometimes it's "necessary" to do this"""
 
     '''nobody really does this'''
 
-To continue a new line use a ```()``` not ```\```.
+To continue a new line, use ```()``` instead of ```\```.
 
 Indenting code should be done in one of two ways: a hanging indent, or 4 space
 indent on the next line.
 
-Good, using hanging indent. Note that the next line is lined up with the
-previous line delimiter::
+Here is a good example using hanging indent. Note that the next line is lined
+up with the previous line delimiter::
 
     log.msg('Something long log message and some vars: {0}, {1}'
             .format(variable_a, variable_b))
 
-Good using 4 spaces::
+Another good example, this time using 4 spaces::
 
     accounts = PaymentAccounts.objects.filter(
         accounts__provider__type=2,

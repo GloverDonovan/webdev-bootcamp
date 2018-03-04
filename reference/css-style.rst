@@ -11,7 +11,7 @@ Just so we all know what we're talking about, a CSS *rule* comprises one or more
 *declarations*. A declaration comprises a *property* and a *value* (some
 properties accept multiple values).
 
-A rule in CSS looks like::
+A rule in CSS looks like this::
 
     selector {
         property: value;
@@ -40,8 +40,8 @@ The basics (tl;dr)
 General guidelines
 ------------------
 
-If a length value is ``0``, do not specify units; ``0px`` and ``0in`` are exactly
-equal because zero is zero.
+If a length value is ``0``, do not specify units; ``0px`` and ``0in`` are both
+equal to zero.
 
 Omit leading zeroes in decimal units, e.g. ``.75em``, not ``0.75em``.
 
@@ -125,9 +125,10 @@ classes on each element in the markup.
         font-size: 16px;
     }
 
-It's usually better to style elements based on their context than to try to make
-every possible style rule free-standing and every element 100% reusable in any
-context on any page. Use descendant selectors judiciously but keep them simple.
+It's usually better to style elements based on their context instead of trying
+to make every possible style rule free-standing and every element 100% reusable
+in any context on any page. Use descendant selectors as needed, but keep them
+simple.
 
 **Good:** ::
 
@@ -139,7 +140,10 @@ context on any page. Use descendant selectors judiciously but keep them simple.
         font: 16px Georgia, serif;
     }
 
-Avoid ``!important`` in CSS unless absolutely necessary, **which it almost
+The "!important" declaration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Avoid using ``!important`` unless absolutely necessary. Hint: **it almost
 never is**.
 
 Some off-the-shelf frameworks/libraries/plugins include ``!important`` styles of
@@ -147,7 +151,7 @@ their own that you might have to override with another ``!important`` style, or
 they write out inline styling into the DOM that you have to override in a style
 sheet with ``!important``. (One could consider these transgressions to be
 warning signs of a poorly made framework/library/plugin and you might want to
-seek better options that don't force you to junk up your CSS.)
+seek better options that don't force you to pollute your CSS.)
 
 Fonts and typography
 ~~~~~~~~~~~~~~~~~~~~
@@ -160,7 +164,7 @@ All modern browsers can scale text in any unit (or zoom the entire page) so this
 is no longer a driving concern, unless you're catering to versions of IE from
 the previous century.
 
-There are times when it's better to use relative ``font-size`` units like `em`s
+There are times when it's better to use relative ``font-size`` units like ``em``
 or percentages. You may have a bit of text that should be sized proportionally
 to a parent element whose font size is unknown. Some responsive designs call
 for globally resizing text in different layouts (e.g. globally bigger text for
@@ -168,17 +172,16 @@ mobile), in which case it's simpler to change a single base size on a parent
 than to re-declare the absolute ``font-size`` of each element.
 
 Just remember that relative font sizes inherit and cascade so you can end up
-with magic numbers like ``.6875em``. The ``rem`` unit (root em) can avoid the
+with magic numbers like ``.6875em``. The ``rem`` unit (root em) can avoid these
 cascade problems, but older browsers don't support rems and IE9 and 10 don't
-support them in shorthand ``font`` declarations (fixed in IE11). It's always
-something.
+support them in shorthand ``font`` declarations (fixed in IE11).
 
-If you use ``rem``s for font sizing, include a ``px`` or other fallback
+If you use ``rem`` units for font sizing, include a ``px`` or other fallback
 for older browsers.
 
 Use `unit-less line-height`_. It doesn't inherit a percentage value of its
 parent element, but instead is based on a multiplier of the font-size, whatever
-that may be. E.g. ``line-height: 1.4;`` or in a shorthand ``font`` property:
+that may be, e.g. ``line-height: 1.4;``, or with the shorthand ``font`` property
 ``font: 14px/1.4 sans-serif;``. Don't use an absolute unit like ``px`` for
 ``line-height``; it creates more problems than it solves.
 
@@ -206,27 +209,25 @@ Example::
 Formatting CSS
 --------------
 
-When a rule has a group of selectors separated by commas, place each selector
-on its own line.
+In general, when you're writing CSS, you should follow the following rules:
 
-The opening brace (``{``) of a rule's declaration block should be on the same
-line as the selector (or the same line as the last selector in a group of
-selectors).
+* When a rule has a group of selectors separated by commas, place each selector
+  on its own line.
+* The opening brace (``{``) of a rule's declaration block should be on the same
+  line as the selector (or the same line as the last selector in a group of
+  selectors).
+* Use a single space before the opening brace (``{``) in a rule, after the last
+  selector.
+* Put each declaration on its own line.
+* Indent the declaration block one level relative to its selector.
+* Use a colon (``:``) immediately after the property name, followed by a single
+  space, then the value.
+* Terminate each declaration with a semicolon (``;``), including the last
+  declaration in a block.
+* Put the closing brace (``}``) on its own line, aligned with the rule's
+  selector.
 
-Use a single space before the opening brace (``{``) in a rule, after the last
-selector.
-
-Put each declaration on its own line.
-
-Indent the declaration block one level relative to its selector.
-
-Use a colon (``:``) immediately after the property name, followed by a single
-space, then the value.
-
-Terminate each declaration with a semicolon (``;``), including the last
-declaration in a block.
-
-Put the closing brace (``}``) on its own line, aligned with the rule's selector.::
+Here's an example::
 
     .selector-1,
     .selector-2 {
@@ -239,16 +240,16 @@ Put the closing brace (``}``) on its own line, aligned with the rule's selector.
     }
 
 When you have a block of related rules, each with one or two declarations,
-you can use a single-line format without any blank lines between rules. It
-makes the block of related rules a bit easier to scan. In this case include
+you can use a single-line format without any blank lines between rules. This
+makes the block of related rules a bit easier to scan. When doing so, include
 a single space after the opening brace and before the closing brace. Add
-spaces after the selector to align the values.::
+spaces after the selector to align the values, like so::
 
     .message-success { color: #080; }
     .message-error   { color: #ff0; }
     .message-notice  { color: #00f; }
 
-Or::
+Here's another example::
 
     @keyframes bounce {
         0%   { bottom: 300px; }
@@ -260,12 +261,13 @@ Or::
 When possible, limit line lengths to 80 characters. This improves readability,
 minimizes horizontal scrolling, makes it possible to view files side by side,
 and produces more useful diffs with meaningful line numbers. There will be
-exceptions such as long URLs or gradient syntax but most rules in CSS should
-fit well within 80 characters even with indentation.
+exceptions such as long URLs or gradient syntax but most CSS rules should fit
+well within 80 characters even with indentation.
 
-Long, comma-separated property values -- such as multiple background images,
-gradients, transforms, transitions, webfonts, or text and box shadows -- can
-be arranged across multiple lines (indented one level from their property).::
+Long, comma-separated property values---such as multiple background images,
+gradients, transforms, transitions, webfonts, or text and box shadows---can
+be arranged across multiple lines (indented one level from their property),
+as seen below::
 
     .selector {
         background-image:
@@ -301,9 +303,9 @@ Or, when the value has the prefix::
     }
 
 
-Also notice this implies a specific order for vendor prefixes from longest to
+Note that this implies a specific order for vendor prefixes from longest to
 shortest, mostly just for readability and consistency. It's convenient that the
-unprefixed version, which always appears last, is shortest by default.
+unprefixed version, which always appears last, is the shortest by default.
 
 
 Whitespace
@@ -336,24 +338,25 @@ exceptions:
 
 Many developers settle into their own system for ordering declarations based on
 relevance, logical groupings, line length, or just semi-random as they're added.
-Although alphabetical ordering can defy any other logical ordering -- adjacent
+Although alphabetical ordering can defy any other logical ordering, adjacent
 properties may have nothing in common while closely related properties can be
-spread far apart -- at least there's no ambiguity about the alphabet and it's
-easy to enforce the guideline across a team.
+spread far apart. There's no ambiguity about the alphabet and it's easy to
+enforce this guideline across a team.
 
-After all that, it's actually pretty rare for a single rule to hold so many
-declarations that ordering becomes too much of a hassle. When in doubt,
-alphabetize.
+It's pretty rare for a single rule to hold so many declarations that ordering
+becomes too much of a hassle. When in doubt, alphabetize.
 
 
 Naming conventions
 ------------------
 
 Names should be semantically meaningful, descriptive of the element's content,
-purpose, or function, not its presentation.
+purpose, or function, *not* its presentation.
 
 | **Bad:** ``.big-blue-button``, ``.right-column``, ``.small``
+|
 | **Good:** ``.button-submit``, ``.content-sub``, ``.field-note``
+|
 
 Many CSS frameworks, such as Twitter's Bootstrap and Zurb's Foundation, define
 a lot of presentational classes for things like column widths, font sizes,
@@ -375,33 +378,36 @@ with presentational names.
 .. Note::
 
     For very large and complex sites, excessively repeating common declarations
-    can lead to a lot of redundancy and CSS bloat. In those cases you can get
+    can lead to a lot of redundancy and CSS bloat. In these cases, you can get
     better performance with some presentational classes if it leads to a
-    significantly lighter style sheet. E.g. it can speed up a site considerably
-    to specify column widths with a class in a few dozen HTML templates than to
-    repeat the same width, float, and margin declarations a thousand times in
-    CSS. We don't have many sites operating on the kind of scale that warrants
-    that approach, but there are always exceptions.
+    significantly lighter style sheet. For example, it can speed up a site
+    considerably to specify column widths with a class in a few dozen HTML
+    templates than to repeat the same width, float, and margin declarations
+    a thousand times in CSS. We don't have many sites operating on the kind of
+    scale that warrants such an approach, but there are always exceptions.
 
-Names should be as short as possible and as long as necessary.
-Clarity is key. E.g. ``.prime-nav`` is better than ``.primary-navigation``,
-but ``.article-author`` is better than ``.art-auth``.
+Names should be as short as possible and as long as necessary. ``.prime-nav``
+is better than ``.primary-navigation``, but ``.article-author`` is better
+than ``.art-auth``. Clarity is key.
 
 Avoid overly abstract names that require a cheat sheet to understand.
 
 | **Bad:** ``.color12``, ``.r2-c6``, ``.v``
+|
 
 Names should be all lower case, no camelcase.
 
 | **Bad:** ``.badClassName``, **Better:** ``.betterclassname``
+|
 
 Separate words with hyphens, not underscores.
 
 | **Bad:** ``.bad_class_name``, **Best:** ``.best-class-name``
+|
 
-Use US English spellings (sorry, rest of the world). CSS itself follows US
-English so it's inconsistent to mix standard spellings like ``color: #000;``
-with classes like ``.colour-picker``.
+Always use the American English spellings. It's inconsistent to mix standard
+spellings like ``color: #000;`` with classes like ``.colour-picker``. CSS
+itself follows American English.
 
 
 Style sheet organization
@@ -409,8 +415,8 @@ Style sheet organization
 
 It's hard to standardize on a particular structure for style sheets, especially
 when it comes to preprocessors and other tools that import and concatenate
-separate files. But that doesn't mean we can't try to stick to some basic
-principles:
+separate files. But that doesn't mean we can't try to at least stick to some
+basic principles:
 
 * Group related rules into sections.
 * Give each section a title in a comment.
@@ -422,7 +428,7 @@ principles:
 A typical style sheet might be structured from top to bottom like so (only an
 example):
 
-1. A preamble comment with a table of contents and other info.
+1. A preamble comment with a table of contents and other information.
 2. *Fonts* (webfonts need to be declared first so you can reference them further
    down the cascade).
 3. *Reset* (global resets should be first so you can override them later).
@@ -439,15 +445,16 @@ example):
 8. *Specific components/modules* (less generic, self-contained widgets that need
    more specific styling like a download button, a contact form, or a carousel).
 
-Many (most) websites end up with a few one-off pages or subsets of pages that
-require more specific styling, rules used only on those pages and nowhere else.
-To avoid dumping everything into a single ever-expanding CSS file, it's usually
-best practice to split it into separate style sheets and combine them
-server-side so each page gets just the rules it needs.
+Many (if not most) websites end up with a few one-off pages or subsets of pages
+that require more specific styling. The CSS rules used to style these pages are
+used only on those pages and nowhere else. To avoid dumping everything into a
+single ever-expanding CSS file, it's necessary to split up page-specific rules
+into separate style sheets and combine them server-side so each page gets just
+the rules it needs.
 
 For responsive layouts, collect all the rules for a given medium/viewport into a
-single media query rather than repeat the same media query several times
-throughout a style sheet.
+single media query. Don't repeat the same media query several times throughout
+the style sheet.
 
 
 Preprocessors
@@ -556,30 +563,36 @@ need the specificity, use an ordinary descendant selector.
     }
 
 
-LESS vs. Stylus
-~~~~~~~~~~~~~~~
+Sass vs. Less vs. Stylus
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-Many current and past Mozilla websites use `LESS <http://lesscss.org/>`_ as a
-CSS preprocessor. However, LESS appeared to be stagnating for a time and some
+Many current and past Mozilla websites use `Less <http://lesscss.org/>`_ as a
+CSS preprocessor. However, Less appeared to be stagnating for a time and some
 projects moved toward `Stylus <http://stylus-lang.com/>`_ as an
 emerging contender under more active development (and also because Stylus has
-some extra features and shares some traits with Python). LESS has since resumed
-more active development, but in an effort to standardize across Mozilla webdev,
+some extra features and shares some traits with Python). Less has since resumed
+more active development, but in an effort to standardize across Mozilla Webdev,
 we're making the call: it's Stylus for us.
 
-New Mozilla webdev projects should use Stylus for CSS preprocessing (or stick
-with vanilla CSS). Sites currently using LESS should work toward converting to
+New Mozilla Webdev projects should use Stylus for CSS preprocessing (or stick
+with vanilla CSS). Sites currently using Less should work toward converting to
 Stylus as soon as practically feasible (`tools can help
-<https://gist.github.com/cvan/5061790#file-less2stylus-js>`_). LESS isn't
+<https://gist.github.com/cvan/5061790#file-less2stylus-js>`_). Less isn't
 forbidden, but prefer Stylus if you have a choice.
+
+More recently, some projects such as the `new front-end to Firefox Add-ons`_
+use `Sass <https://sass-lang.com/>`_ as the preprocessor of choice. It may
+be useful to learn Sass as well.
+
+.. _new front-end to Firefox Add-ons: https://github.com/mozilla/addons-frontend
 
 
 A Few Words About Stylus
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 On the `Stylus website <http://stylus-lang.com/>`_, right at the top
-of the home page, the creators crow a lot about how all these required CSS
-syntax bits, like braces and colons and semicolons, are optional in Stylus, as
+of the home page, the creators exclaim how all the required CSS syntax bits,
+like braces and colons and semicolons, are optional in Stylus, as
 if they're a great annoyance that we've all been clamoring to abolish for years.
 
 Well, Stylus still generates ordinary CSS in the end, and inserts all those
@@ -589,9 +602,9 @@ especially if they make style sheets easier to read. For the sake of readability
 and smoother collaboration, we should try to make CSS look like CSS.
 
 Format your Stylus-flavored pre-processed files as if you were formatting
-vanilla CSS. Do use mixins, variables, functions, etc. and take advantage of all
-the flexible goodness Stylus offers, but it should still read like a CSS
-document.
+vanilla CSS. Do use mixins, variables, functions, etc., and take advantage of
+all the flexible goodness Stylus has to offer, but make sure that your CSS
+files still read like a CSS document.
 
 * Use CSS syntax (Stylus allows it).
 * Include colons, semi-colons, and braces.
@@ -617,50 +630,44 @@ document.
     }
 
 
-A Note on Sass/SCSS/Compass
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Very few (if any?) Mozilla projects use `Sass <https://sass-lang.com>`_ because
-it requires Ruby. While Sass is a fine tool, and can be awesome in combination
-with Compass, adding Ruby to our dev stack is a bridge too far. Sorry Rubyists;
-we're a Python shop.
-
-Even so, all the same formatting and organizational guidelines can apply just
-as well to Sass/SCSS. Live long and prosper.
+Note that all the same formatting and organizational guidelines can apply to
+both Sass and Sassy CSS (SCSS) as well.
 
 
 Validate!
 ---------
 
-Validate your CSS with the `W3C's online tool <https://github.com/w3c/css-validator>`_
-or equivalent.
+Validate your CSS with the `W3C CSS Validation Service`_ or equivalent.
 
-Validation tools may report errors or give warnings for vendor prefixes, as they
-should. It's something to be mindful of but it's perfectly fine to use prefixed
-properties if you're doing it right.
+Note that validation tools may report errors or give warnings for vendor
+prefixes since they aren't officially supported, but it's perfectly fine
+to use prefixed properties if you're doing it right.
 
 Validation *warnings* are very different from validation *errors*. You should
 take warnings under consideration and address them if needed, but errors are
 real problems that you need to fix.
 
-If you're using a preprocessor you'll obviously only be able to validate the
-generated plain CSS, which can make it harder to track down where the errors
-appear in the source files. A well organized style sheet can ease the pain.
+If you're using a CSS preprocessor, you'll only be able to validate the output
+CSS, which can make it harder to track down where the errors appear in the
+source files. A well organized style sheet makes this debugging process a lot
+easier.
+
+.. _W3C CSS Validation Service: https://github.com/w3c/css-validator
 
 
 A Note on CSS Lint
 ~~~~~~~~~~~~~~~~~~
 
 `CSS Lint <http://csslint.net/>`_ is a useful tool and we recommend it, but take
-its results with a grain of salt. Many of Lint's rules are phrased like
-absolute edicts when they're more like soft warnings of things to be mindful of
-(e.g. "Don't use too many floats"). Lint also forbids some things we expressly
-allow in our own guidelines (e.g. "Don't use ID selectors"). If your file gets a
-slew of warnings from CSS Lint that doesn't mean it's bad, just be able to
-justify your decisions.
+its results with a grain of salt. Many CSS Lint rules are phrased like laws when
+they're more like soft warnings of things to be mindful of (e.g. "Don't use too
+many floats"). CSS Lint also forbids some things we expressly allow in our own
+guidelines (e.g. "Don't use ID selectors"). If your file gets a slew of warnings
+from CSS Lint, that doesn't mean it's bad, just be able to justify your
+decisions.
 
-`This shortcut to CSS Lint`_ disables some of the more stringent rules we don't
-necessarily abide.
+`This shortcut to CSS Lint`_ disables some of the more opinionated rules we don't
+necessarily abide to.
 
 .. _This shortcut to CSS Lint: http://csslint.net/#warnings=display-property-grouping,duplicate-properties,empty-rules,known-properties,adjoining-classes,compatible-vendor-prefixes,vendor-prefix,fallback-colors,star-property-hack,underscore-property-hack,bulletproof-font-face,font-faces,universal-selector,unqualified-attributes,zero-units,overqualified-elements,shorthand,floats,important,outline-none
 

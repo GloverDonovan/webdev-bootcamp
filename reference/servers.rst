@@ -10,7 +10,7 @@ Development, staging, and production
 
 Most Mozilla websites are split into three environments:
 
-- Development (AKA Dev) usually runs off of the latest code that has been
+- Development (AKA dev) usually runs off of the latest code that has been
   committed for a project by updating regularly throughout the day. Dev is
   useful for testing new features and getting feedback.
 
