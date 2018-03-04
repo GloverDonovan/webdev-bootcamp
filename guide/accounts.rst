@@ -10,11 +10,11 @@ GitHub
 
 Most Webdev projects are hosted on GitHub_. GitHub provides hosting for our
 source code, as well as tools we use for collaboration and code review. GitHub
-is based on git_, a distributed version control system that lets us track the
+is based on Git_, a distributed version control system that lets us track the
 changes we make to our code.
 
-Once you've created a GitHub account, you can check out the `GitHub help site`_
-for guides on the basics of using git and GitHub.
+Once you've created a GitHub account, check out the `GitHub help site`_ for
+introductory guides on using Git and GitHub.
 
 .. seealso::
 
@@ -22,7 +22,7 @@ for guides on the basics of using git and GitHub.
       Mozilla's organization account on GitHub.
 
 .. _GitHub: https://github.com/
-.. _git: https://git-scm.com/
+.. _Git: https://git-scm.com/
 .. _GitHub help site: https://help.github.com/
 
 Bugzilla
@@ -39,10 +39,10 @@ a Bugzilla account. An account also allows you to "CC" yourself on bugs that
 you are interested in, so that you receive emails when those bugs are changed.
 
 After you've been using Bugzilla for a while as a community member,
-it's worthwhile applying for expanded permissions. The editbugs
-permission allows you to assign bugs to yourself and resolve them, for
-example. See the `Bugzilla Permissions Page`_ for details. Note that
-new employees get this permission automatically, no need to ask for it.
+it's worthwhile applying for expanded permissions. The editbugs permission,
+for example, allows you to assign bugs to yourself and resolve them. See
+the `Bugzilla Permissions Page`_ for details. Note that new employees
+get this permission automatically; there is no need to ask for it.
 
 .. note:: It's highly recommended to add your IRC nickname to your real name
    within Bugzilla to make it easy for others to auto-complete your name.

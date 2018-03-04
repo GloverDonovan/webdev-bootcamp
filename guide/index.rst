@@ -8,7 +8,7 @@ Our goal here is to get you up and running for contributing as a web developer.
 This guide attempts to be generic enough to be useful to any webdev project,
 but some details (especially around software you need installed) may vary among
 projects. Any project you're contributing to should have documentation that
-explains these details in, uh, detail.
+explains these details in, well, detail!
 
 Let's get started!
 

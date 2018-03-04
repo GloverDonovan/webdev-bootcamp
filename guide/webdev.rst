@@ -1,13 +1,14 @@
 The Mozilla Webdev Group
 ========================
 
-Webdev is an informal group of people across the Mozilla project that are
-interested in or work in web development. Webdev isn't linked to a specific
-team and welcomes everyone who wants to be a part of it to join.
+The Mozilla Webdev Group is an informal group of people across the Mozilla
+project that are interested in or work in web development. The group isn't
+linked to a specific team and welcomes everyone who wants to be a part of
+it to join.
 
-As a new contributor, the primary use of the Webdev group will be to help
-answer questions you have or to help you find interesting projects to work on.
-Later on, you can start attending some of our online meetings to meet the rest
+As a new contributor, you'll primarily be using the Webdev group to help
+answer questions you have or to find interesting projects to work on. Later
+on, you can start attending some of our online meetings to meet the rest
 of the group and keep up to date with what everyone else is up to.
 
 How to Talk to Us
@@ -33,5 +34,5 @@ finding your way around.
 
 If you're a new employee, your mentor may be your manager, or it may be a
 coworker. If you're a volunteer, ask someone who works on the project you want
-to contribute to, and if they cannot mentor you themselves, they should be able
+to contribute to. If they cannot mentor you themselves, they should be able
 to direct you to someone who can.

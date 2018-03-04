@@ -3,7 +3,7 @@ Development Process
 
 While the details vary, there is a general framework for the development
 process at Mozilla which describes how a change goes from an idea in someone's
-head to deployed code on a production webserver. This document attempts to
+head to deployed code on a production web server. This document attempts to
 describe that process.
 
 Filing a Bug
@@ -26,9 +26,8 @@ kanban board.
 Working on the Bug
 ------------------
 
-Either someone will voluntarily take a bug, or, in the case of projects with
-assigned developers actively working on them, it will be assigned to a
-developer.
+Either someone will voluntarily take a bug, or it will be assigned to a
+developer actively working on the project.
 
 The process of fixing a bug involves:
 
@@ -46,11 +45,13 @@ The process of fixing a bug involves:
 Git and GitHub
 ^^^^^^^^^^^^^^
 
-For projects using Git and GitHub (which is most Webdev projects), the process
+For projects using Git and GitHub (i.e. most Webdev projects), the process
 can be explained in more detail:
 
-- On GitHub, ensure you have `forked the repository`_ for your project to your
-  own account and have added it as a `remote`_ to your repository.
+- On GitHub, ensure that you have `forked the upstream repository`_ for the
+  project to your own account. If you plan to regularly contribute to this
+  repository, you should add the upstream repository as a `remote`_ to your
+  repository so that you can fetch the latest changes from it.
 - Identify the main development branch for your project. This is usually the
   ``master`` branch.
 - Make sure the current branch is the development branch and create a new
@@ -58,7 +59,7 @@ can be explained in more detail:
 - Once your work is committed and ready for review, `push the branch`_ to your
   fork on GitHub and `submit a pull request`_.
 - If you know who should review your change, add a comment to your pull request
-  with their ``@Username`` in it and ask for a review (often abbreviated as
+  with their ``@username`` in it and ask for a review (often abbreviated as
   ``r?``).
 
 .. seealso::
@@ -71,7 +72,7 @@ can be explained in more detail:
       A process for branching, reviewing, and merging code that is very similar
       to the process above.
 
-.. _forked the repository: https://help.github.com/articles/fork-a-repo
+.. _forked the upstream repository: https://help.github.com/articles/fork-a-repo
 .. _remote: https://help.github.com/articles/about-remote-repositories
 .. _push the branch: https://help.github.com/articles/pushing-to-a-remote
 .. _submit a pull request: https://help.github.com/articles/using-pull-requests
