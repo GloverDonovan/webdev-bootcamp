@@ -27,7 +27,7 @@ If you do need to be framed, you can restrict this to web pages in the same
 origin (people sometimes think "same domain", but it's actually the protocol,
 domain name and port forming the security scope of a website).
 There are detailed docs about `XFO on MDN`_ and there are additional resources
-that show you how to set up X-Frame-Options in your `Django`_ and `NodeJS`_
+that show you how to set up X-Frame-Options in your `Django`_ and `Node.js`_
 projects.
 
 
@@ -44,8 +44,8 @@ Content Security Policy
 some client-side attacks on web applications, like Cross-Site Scripting (XSS).
 Think of CSP as a whitelist of resources which are allowed to be embedded into
 your HTML documents. As CSP does not prevent flaws from being exploited but merely
-mitigates the effects, you should never solely rely on it. `CSP 1.1`_ is already
-being drafted at the W3C, but you should focus on CSP 1.0 - mainly because of
+mitigates the effects, you should never solely rely on it. `CSP 3.0`_ is already
+being drafted at the W3C, but you should focus on CSP 2.0 - mainly because of
 its `wide adoption among browsers`_. Head on over to `MDN`_ for more information
 on this topic.
 
@@ -77,15 +77,15 @@ Here are some strategies for avoiding common CSP errors:
 :Inline script elements:
     Should go into a JS file.
 :Inline event handlers:
-    Attach event handler in an external JS file (addEventListener) or let event
-    bubbling work for you (e.g. JQuery's $.live).
+    Attach event handler in an external JS file (``addEventListener``) or let event
+    bubbling work for you (e.g. jQuery's ``$.live``).
 :JS pseudo protocol:
     Attach click event handler to the node (see above)
 :Inline style elements:
     These can be easily put into an external CSS file
 :Inline style attributes:
     Add classes or IDs to your markup and handle those in an external CSS file
-:Inline style attributes which are set via JavaScript:
+:Inline style attributes set via JavaScript:
     Use the ``element.style`` property instead of ``element.setAttribute``.
 
 
@@ -96,12 +96,12 @@ Projects simplifying the use of CSP
 * Node.js/Express: https://github.com/evilpacket/helmet
 
 
-.. _`wide adoption among browsers`: https://caniuse.com/#search=content%20security%20policy
-.. _`Content Security Policy`: https://www.w3.org/TR/CSP/
-.. _`CSP 1.1`: https://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html
-.. _`MDN`: https://developer.mozilla.org/docs/Security/CSP
-.. _`Security Review Process`: https://wiki.mozilla.org/Security/ReviewProcess
-.. _`blog post`: https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/
-.. _`XFO on MDN`: https://developer.mozilla.org/docs/HTTP/X-Frame-Options
-.. _`Django`: https://docs.djangoproject.com/en/dev/ref/clickjacking/
-.. _`NodeJS`: https://npmjs.org/package/helmet
+.. _wide adoption among browsers: https://caniuse.com/#search=content%20security%20policy
+.. _Content Security Policy: https://www.w3.org/TR/CSP2/
+.. _CSP 3.0: https://www.w3.org/TR/CSP3/
+.. _MDN: https://developer.mozilla.org/docs/Security/CSP
+.. _Security Review Process: https://wiki.mozilla.org/Security/ReviewProcess
+.. _blog post: https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/
+.. _XFO on MDN: https://developer.mozilla.org/docs/HTTP/X-Frame-Options
+.. _Django: https://docs.djangoproject.com/en/dev/ref/clickjacking/
+.. _Node.js: https://npmjs.org/package/helmet
