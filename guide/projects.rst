@@ -15,7 +15,7 @@ projects to contribute to:
   someone may reply with a recommendation.
 
 .. _GetInvolved: https://wiki.mozilla.org/Webdev/GetInvolved
-.. _`dev-webdev@lists.mozilla.org mailing list`: https://lists.mozilla.org/listinfo/dev-webdev
+.. _dev-webdev@lists.mozilla.org mailing list: https://lists.mozilla.org/listinfo/dev-webdev
 
 Getting set up
 --------------
@@ -31,9 +31,9 @@ Find a mentor
 You may also find it useful to find someone who is working on or responsible
 for the project you want to contribute to and asking if they can help you find
 a task to work on and answer any other questions you have. If there's no
-information in the README for a project about who works on it, you can check
-the commit history (available in GitHub by clicking "# commits" near the top
-of the page) to find who recently worked on the project, or by asking the
+information about who works on the project in the README, you can check
+the commit history (available in GitHub by clicking ``# commits`` near the top
+of the page) to find out who recently worked on the project, or by asking the
 :doc:`Webdev group <webdev>` who is responsible.
 
 How to contribute
